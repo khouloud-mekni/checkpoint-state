@@ -1,38 +1,87 @@
+body{
+  background-image:url(https://cutewallpaper.org/21/star-desktop-wallpapers/Star-Dust-4K-HD-Desktop-Wallpaper-for-4K-Ultra-HD-TV-.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .App {
   text-align: center;
+  background-image: url(https://www.xtrafondos.com/wallpapers/resoluciones/20/triangulo-con-planetas_2560x1440_5534.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:60%;
+  color:white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  border-radius: 20%;
+}
+img{
+  border-radius: 50%;
+  position :relative;
+  right:40%;
+  width:270px;
+  box-shadow:  13px 13px 26px #43c3cc,
+            -13px -13px 26px #0d7f83;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.cnt{
+  background-color: rgb(36, 105, 90);
+  width:50px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30%;
+}
+button {
+  margin-top: 11%;
+  margin-bottom: 3%;
+--glow-color: rgb(217, 176, 255);
+--glow-spread-color: rgba(51, 173, 167, 0.781);
+--enhanced-glow-color: rgb(231, 206, 255);
+--btn-color: rgb(36, 105, 105);
+outline: none;
+border: .25em solid var(--glow-color);
+padding: 1em 3em;
+color: var(--glow-color);
+font-size: 15px;
+font-weight: bold;
+background-color: var(--btn-color);
+border-radius: 1em;
+outline: none;
+box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+text-shadow: 0 0 .5em var(--glow-color);
+position: relative;
+transition: all 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button::after {
+pointer-events: none;
+content: "";
+position: absolute;
+top: 120%;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: var(--glow-spread-color);
+filter: blur(2em);
+opacity: .7;
+transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:hover {
+ color: var(--btn-color);
+ background-color: var(--glow-color);
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+ box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
 }

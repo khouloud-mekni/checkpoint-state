@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import "./App.css";
+import Profile from './components/Profile';
+import myImg from './hkcat.jpeg'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default class App extends Component {
+  constructor(){
+    super()
+    this.state={
+      person:{
+      fullName:"khouloud",
+      bio:"FullStack JS",
+      profession:"web Devloper",
+      imgSrc : myImg ,
+      
+      
+      },
+      show : false
+
+    }
+  }
+  handleClick=()=>{
+    this.setState({
+    show: !this.state.show
+    })
 }
 
-export default App;
+
+  render() {
+    const {fullName,bio,profession,imgSrc}=this.state.person
+    
+    return (
+      <div className="App">
+        {this.state.show?
+        (<Profile
+          fullName={fullName}
+          bio={bio}
+          profession={profession}
+          imgSrc = {imgSrc}>
+            </Profile>)
+            :null}
+        
+        <button onClick={this.handleClick}>
+          {this.state.show ? "hide profile" : "show profile"}
+        </button>
+        
+        
+      </div>
+    )
+  }
+}
+
